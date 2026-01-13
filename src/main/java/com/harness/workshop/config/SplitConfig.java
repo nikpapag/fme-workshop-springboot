@@ -61,6 +61,8 @@ public class SplitConfig {
 
         SplitClientConfig cfg = SplitClientConfig.builder()
                 .setBlockUntilReadyTimeout(readyTimeoutMs)   // configures the timeout used by blockUntilReady()
+                .streamingEnabled(false)
+                .featuresRefreshRate(20)    
                 .build();
         return SplitFactoryBuilder.build(sdkKey, cfg);
     }
