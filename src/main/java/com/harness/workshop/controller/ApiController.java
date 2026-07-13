@@ -37,4 +37,12 @@ public class ApiController {
                 .<ResponseEntity<?>>map(u -> ResponseEntity.ok(service.eval(split, u)))
                 .orElseGet(() -> ResponseEntity.badRequest().body(Map.of("error","USER_NOT_FOUND")));
     }
+
+    @PostMapping("/evaluate/{split}/{userId}/test")
+    public ResponseEntity<?> evalOneSpecific(@PathVariable String split, @PathVariable String userId) {
+        System.out.println("Evaluating user: "+userId);
+        return service.findUser(userId)
+                .<ResponseEntity<?>>map(u -> ResponseEntity.ok(service.eval(split, u)))
+                .orElseGet(() -> ResponseEntity.badRequest().body(Map.of("error","SECOND_EVALUATION_FAILED")));
+    }
 }
