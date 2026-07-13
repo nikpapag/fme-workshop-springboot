@@ -1,7 +1,7 @@
 ````markdown
-# HARNESS Portal
+# devxbackend
 
-HARNESS Portal is a Spring Boot application providing a secure internal portal for enterprise banking users. It acts as a presentation and orchestration layer for approved business services, enabling users to access operational information and complete authorised workflows through a consistent web interface.
+devxbackend is a Spring Boot application providing a secure internal portal for enterprise banking users. It acts as a presentation and orchestration layer for approved business services, enabling users to access operational information and complete authorised workflows through a consistent web interface.
 
 The application is designed to operate within a controlled banking environment and follows enterprise requirements for security, resilience, auditability, observability, and controlled software delivery.
 
@@ -9,24 +9,25 @@ The application is designed to operate within a controlled banking environment a
 
 ```properties
 assignment_group = xxxxx
-application = HARNESS Portal
+application = devxbackend
 release = RLSE123456
 impact = 3
 ````
 
 | Attribute        | Value                       |
 | ---------------- | --------------------------- |
-| Application      | HARNESS Portal                |
-| Assignment Group | xxxxx                       |
-| Release          | RLSE123456                  |
+| Application      | devxbackend                |
+| Assignment Group | Central Team                       |
 | Impact           | 3                           |
 | Application Type | Spring Boot Web Application |
 | Environment      | Enterprise Banking          |
 | Support Model    | Assignment-group owned      |
+| Harness Pipeline | devx_pipeline |
+
 
 ## Key Capabilities
 
-HARNESS Portal provides:
+devxbackend provides:
 
 * Secure access to approved banking services and operational workflows
 * Integration with internal APIs and enterprise systems
@@ -166,7 +167,7 @@ Secrets must be retrieved at runtime from the bank-approved secrets-management p
 
 ## Security
 
-HARNESS Portal must comply with the organisation's security standards.
+devxbackend must comply with the organisation's security standards.
 
 Security controls include:
 
@@ -329,7 +330,7 @@ Production images must be built and published only through the approved CI/CD pi
 
 ## Deployment
 
-HARNESS Portal is deployed through the organisation's controlled delivery pipeline.
+devxbackend is deployed through the organisation's controlled delivery pipeline.
 
 A standard release process includes:
 
@@ -391,7 +392,7 @@ Operational incidents and support requests should be routed using the following 
 
 ```properties
 assignment_group = xxxxx
-application = HARNESS Portal
+application = devxbackend
 release = RLSE123456
 impact = 3
 ```
@@ -442,7 +443,7 @@ This application is owned and supported by:
 
 ```text
 Assignment Group: xxxxx
-Application:      HARNESS Portal
+Application:      devxbackend
 Release:          RLSE123456
 Impact:           3
 ```
